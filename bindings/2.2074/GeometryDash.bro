@@ -13771,7 +13771,7 @@ class GJAssetDownloadAction {
     int m_status;
 }
 
-[[link(android), depends(GJGameState), depends(PlayerButtonCommand)]]
+[[link(android), depends(GJGameState), depends(PlayerButtonCommand), depends(GameManager)]]
 class GJBaseGameLayer : cocos2d::CCLayer, TriggerEffectDelegate {
     GJBaseGameLayer() = win 0x2c7b10, m1 0xae890, imac 0xc00f0, ios 0x12660c;
     ~GJBaseGameLayer() = win 0x200540, m1 0xe02d8, imac 0xfd6a0, ios 0x1dae3c;
@@ -24893,7 +24893,7 @@ class MenuGameLayer : cocos2d::CCLayer {
     float m_backgroundWrapPosition;
 }
 
-[[link(android)]]
+[[link(android), depends(GameManager)]]
 class MenuLayer : cocos2d::CCLayer, FLAlertLayerProtocol, GooglePlayDelegate {
     // static MenuLayer* create() = ios 0x2655a4;
     // virtual ~MenuLayer();
@@ -28143,7 +28143,7 @@ class PlayerObject : GameObject, AnimatedSpriteDelegate {
     bool m_enable22Changes;
 }
 
-[[link(android), depends(DynamicBitset), depends(SavedActiveObjectState), depends(SavedObjectStateRef), depends(SavedSpecialObjectState)]]
+[[link(android), depends(DynamicBitset), depends(SavedActiveObjectState), depends(SavedObjectStateRef), depends(SavedSpecialObjectState), depends(GameManager)]]
 class PlayLayer : GJBaseGameLayer, CCCircleWaveDelegate, CurrencyRewardDelegate, DialogDelegate {
     PlayLayer() = ios 0x12633c, win 0x38df50, m1 0xae588, imac 0xbfcd0;
     ~PlayLayer() = win 0x38e920, m1 0x9c9c4, imac 0xab980, ios 0x1184d4;
